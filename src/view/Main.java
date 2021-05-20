@@ -28,7 +28,7 @@ public class Main {
 		System.out.println(c1);
 		System.out.println(c2);
 
-		System.out.println("Introdueix objectiu:");
+		System.out.println("Introdueix objectiu :");
 
 		System.out.println("compte enrere");
 		for (int i = 10; i >= 0; i--) {

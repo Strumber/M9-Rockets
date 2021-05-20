@@ -19,7 +19,7 @@ public class Propulsor extends Thread {
 	public void setObjectiu(int obj) {
 		if (obj > potencia) {
 			this.objectiu = potencia;
-		} else if (obj <= 0) {
+		} else if (obj <= 0) {//Atura propulsors
 			this.objectiu = 0;
 			System.out.println("Aturant Propulsor : " + this.id + "-->");
 

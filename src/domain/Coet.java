@@ -27,7 +27,7 @@ public class Coet {
 		}
 	}
 		
-	public void iniciar() {
+	public void iniciar() {// metode iniciar threads
 		for (Propulsor p: propulsors) {
 			p.start();
 		}
