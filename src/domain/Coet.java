@@ -17,6 +17,22 @@ public class Coet {
 	public void addPropulsor(Propulsor p) {
 		this.propulsors.add(p);
 	}
+	public void setPropulsors(ArrayList<Propulsor> propulsors) {
+		this.propulsors = propulsors;
+	}
+	
+	public void setObjectiu (int obj) {
+		for (Propulsor p: propulsors) {
+			p.setObjectiu(obj);
+		}
+	}
+		
+	public void iniciar() {
+		for (Propulsor p: propulsors) {
+			p.start();
+		}
+		
+	}
 
 	public String getCodi() {
 		return codi;
@@ -38,5 +54,9 @@ public class Coet {
 		}
 		return res;
 	}
+
+	
+	
+	
 
 }
