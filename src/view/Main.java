@@ -27,12 +27,15 @@ public class Main {
 		System.out.println("M9 Rockets");
 		System.out.println(c1);
 		System.out.println(c2);
+
+		System.out.println("Introdueix objectiu:");
+
 		System.out.println("compte enrere");
 		for (int i = 10; i >= 0; i--) {
-			System.out.println("--> "+i);
+			System.out.println("--> " + i);
 
 			try {
-				Thread.sleep(100);
+				Thread.sleep(1000);
 
 			} catch (InterruptedException e) {
 
@@ -44,10 +47,18 @@ public class Main {
 
 		c1.iniciar();
 		c2.iniciar();
+
 		while (true) {
-			int obj = sc.nextInt();
-			c1.setObjectiu(obj);
-			c2.setObjectiu(obj);
+
+			try {
+				int obj = sc.nextInt();
+				c1.setObjectiu(obj);
+				c2.setObjectiu(obj);
+			} catch (Exception e) {
+				System.out.println("Valor incorrecte,\n fi programa");
+				break;
+
+			}
 
 		}
 

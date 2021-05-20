@@ -12,15 +12,17 @@ public class Propulsor extends Thread {
 		this.id = id;
 		this.potencia = potencia;
 		this.pActual = 0;
-		//this.objectiu = 0;
+		// this.objectiu = 0;
 
 	}
 
 	public void setObjectiu(int obj) {
 		if (obj > potencia) {
 			this.objectiu = potencia;
-		} else if (obj < 0) {
+		} else if (obj <= 0) {
 			this.objectiu = 0;
+			System.out.println("Aturant Propulsor : " + this.id + "-->");
+
 		} else {
 			this.objectiu = obj;
 		}
@@ -77,10 +79,10 @@ public class Propulsor extends Thread {
 							+ " Objectiu aconseguit !!!");
 
 					conseguida = true;
-				}
 
+				}
 			}
 		}
-	}
 
+	}
 }
